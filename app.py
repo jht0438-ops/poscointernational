@@ -22,6 +22,28 @@ h1, h2, h3 {letter-spacing: -0.02em;}
     padding: 14px 16px;
     border-radius: 12px;
 }
+
+/* 상단 탭 글자가 세로로 잘리지 않도록 탭 높이와 여백 확보 */
+div[data-baseweb="tab-list"] {
+    gap: 0.35rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    align-items: center;
+}
+button[data-baseweb="tab"] {
+    height: auto !important;
+    min-height: 3.25rem !important;
+    padding: 0.75rem 0.9rem !important;
+    overflow: visible !important;
+}
+button[data-baseweb="tab"] > div {
+    line-height: 1.45 !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+}
+div[data-baseweb="tab-border"] {
+    bottom: 0 !important;
+}
 .info-box {
     background: #f7f9fc;
     border: 1px solid #dfe5ec;
