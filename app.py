@@ -44,6 +44,39 @@ button[data-baseweb="tab"] > div {
 div[data-baseweb="tab-border"] {
     bottom: 0 !important;
 }
+
+/* Streamlit 상단 탭 잘림 현상 추가 보정 */
+div[data-testid="stTabs"] {
+    overflow: visible !important;
+    padding-top: 0.65rem !important;
+}
+div[data-testid="stTabs"] > div:first-child {
+    overflow: visible !important;
+}
+div[data-baseweb="tab-list"] {
+    min-height: 4.25rem !important;
+    height: auto !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    padding: 0.7rem 0.15rem 0.55rem 0.15rem !important;
+}
+button[data-baseweb="tab"] {
+    min-height: 3.4rem !important;
+    height: 3.4rem !important;
+    margin-top: 0.2rem !important;
+    padding: 0.7rem 0.9rem !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+}
+button[data-baseweb="tab"] div,
+button[data-baseweb="tab"] p,
+button[data-baseweb="tab"] span {
+    line-height: 1.35rem !important;
+    min-height: 1.35rem !important;
+    overflow: visible !important;
+    white-space: nowrap !important;
+}
+
 .info-box {
     background: #f7f9fc;
     border: 1px solid #dfe5ec;
